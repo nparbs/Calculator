@@ -31,7 +31,7 @@
         
         
         <h1>Lab #2 Calculator</h1>
-        
+        <img src="https://qph.ec.quoracdn.net/main-qimg-3fc26c9a5ece68ddb1789314fd46242f" style="width:400px; height:200px;"/>
         <h2>Area of Rectangle</h2>
         <form id="rectangleForm" name="rectangleForm" method="POST" action="lab2calc">
             Width: <input type="text" name="val1" value=""/><br>
@@ -44,7 +44,7 @@
                 out.println("The Area of the rectangle is " + msg);
             }
         %>
-        
+        <img src="http://www.tutornext.com/system/files/u21/cir.JPG" style="width:300px; height:200px;"/>
         <h2>Area of Circle</h2>
         <form id="circleForm" name="circleForm" method="POST" action="lab2calc">
             Width: <input type="text" name="val1" value=""/><br>
@@ -57,7 +57,7 @@
                 out.println("The Area of the cirlce is " + msg);
             }
         %>
-        
+        <img src="https://www.findtutorsnearme.com/wp-content/uploads/right-triangles-on-gmat-test.jpg" style="width:300px; height:200px;"/>
         <h2>Length of hypotenuse </h2>
         <form id="triForm" name="triForm" method="POST" action="lab2calc">
             Width: <input type="text" name="val1" value=""/><br>
