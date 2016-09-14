@@ -7,23 +7,21 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.CalcService;
-import model.CalcType;
+import model.ListService;
 
 /**
  *
  * @author Nick
  */
-@WebServlet(name = "CalcController", urlPatterns = {"/Calc1"})
-public class CalcController extends HttpServlet {
-
-    private static final long serialVersionUID = 1L;
+@WebServlet(name = "ListController", urlPatterns = {"/ListController"})
+public class ListController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,15 +35,13 @@ public class CalcController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        String val1 = request.getParameter("val1");
-        String val2 = request.getParameter("val2");
-        String type = request.getParameter("type");
-        CalcService service = new CalcService();
+     
+        ListService ls = new ListService();
+        List<String> shoppingList = ls.getShoppingList();
         
-        request.setAttribute("answer", service.doCalculation(val1,val2,type));
+        request.setAttribute("shoppingList", shoppingList);
         
-        RequestDispatcher view = request.getRequestDispatcher("/calcAnswer.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("/showlist.jsp");
         view.forward(request, response);
     }
 

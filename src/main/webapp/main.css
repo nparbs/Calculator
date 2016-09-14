@@ -9,19 +9,21 @@ and open the template in the editor.
 */
 
 p {
-    color:orange;
+
     margin: 10px 10px 10px 10px;
     font-size: 20px;
 }
 
 body {
-    background-color: slategrey;
-    color: white;
-    
+    /*    background-color: slategrey;
+        color: white;*/
+
+
+    text-align: center;  
 }
 
 form input{
-   margin: 10px 10px 10px 10px;
-    
+    margin: 10px 10px 10px 10px;
+
 }
 

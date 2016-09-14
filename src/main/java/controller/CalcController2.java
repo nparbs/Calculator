@@ -39,7 +39,7 @@ public class CalcController2 extends HttpServlet {
         String type = request.getParameter("type");
         CalcService service = new CalcService();
         
-        request.setAttribute("msg", service.doCalculation(val1,val2,type));
+        request.setAttribute("answer", service.doCalculation(val1,val2,type));
         request.setAttribute("type", type);
         
         RequestDispatcher view = request.getRequestDispatcher("/lab2calc.jsp");
